@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div
-      class="container-fluid d-flex justify-content-center align-items-start py-4"
-    >
+    <div class="container-fluid d-flex justify-content-center align-items-start py-4">
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
@@ -31,13 +29,13 @@
                 aria-describedby="message"
               />
             </div>
-            <div id="message"></div>
+            <div id="message" aria-live="polite"></div>
           </div>
           <div class="card-footer d-flex justify-content-end">
             <button
               class="btn btn-primary"
               id="submitBtn"
-              onclick="checkInput()"
+              onclick="return checkInput()"
             >
               Submit
             </button>
