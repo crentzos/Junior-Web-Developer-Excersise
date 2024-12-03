@@ -1,19 +1,6 @@
-document.getElementById('numberInput').addEventListener('input', function () {
-    const numberInput = parseFloat(this.value);
+function validateInput(value) {
+    const numberInput = parseFloat(value);
     const message = document.getElementById('message');
-
-    if ((!isNaN(numberInput) && numberInput > 10) || this.value === '' ) {
-        message.textContent = '';
-    } else {
-        message.textContent = 'Please enter a number greater than 10.';
-        message.style.color = 'red';
-    }
-});
-
-function validateInput() {
-    const numberInput = parseFloat(document.getElementById('numberInput').value);
-    const message = document.getElementById('message');
-
     if (isNaN(numberInput) || numberInput <= 10) {
         message.textContent = 'Please enter a number greater than 10.';
         message.style.color = 'red';
@@ -21,4 +8,13 @@ function validateInput() {
         message.textContent = 'Thank you for the input!';
         message.style.color = 'green';
     }
+}
+
+document.getElementById('numberInput').addEventListener('input', function () {
+    validateInput(this.value);
+});
+
+function checkInput() {
+    const inputValue = document.getElementById('numberInput').value;
+    validateInput(inputValue);
 }

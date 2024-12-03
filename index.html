@@ -19,7 +19,7 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
-            <h1 class="text-primary text-left mb-4">Form</h1>
+            <h1 class="text-primary">Form</h1>
             <div class="form-group">
               <label for="numberInput">Number</label>
               <input
@@ -27,14 +27,20 @@
                 id="numberInput"
                 class="form-control"
                 placeholder="Please enter a number"
-                min="11"
                 required
+                aria-describedby="message"
               />
             </div>
             <div id="message"></div>
           </div>
           <div class="card-footer d-flex justify-content-end">
-            <button class="btn btn-primary" id="submitButton" onclick="validateInput()">Submit</button>
+            <button
+              class="btn btn-primary"
+              id="submitBtn"
+              onclick="checkInput()"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

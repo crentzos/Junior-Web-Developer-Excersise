@@ -1,52 +1,84 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #00060c; 
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: #ced4da; 
 }
+
 
 .card {
     border: 2px solid #ced4da; 
-    background-color: #fff;
+    background-color: #fff; 
     max-width: 500px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    border-radius: 12px; /* Rounded corners for the card */
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 12px; 
 }
+
 
 .form-label {
     color: #6c757d; 
 }
 
+
 .form-control {
-    border-color: #6c757d;
+    border-color: #6c757d; 
+    font-size: 1rem; 
 }
+
 
 .card-body, .card-footer {
     background-color: #f8f9fa;
 }
 
+
 .btn-primary {
-    color: #045bb8;
-    background-color: #f8f9fa;
-    border-color: #045bb8;
-    border-width: 2px;
+    color: #045bb8; 
+    background-color: #f8f9fa; 
+    border-color: #045bb8; 
+    border-width: 2px; 
     border-radius: 8px; 
-    font-weight: bold;
-    padding: 0.05rem 0.5rem;
+    font-weight: bold; 
+    padding: 0.05rem 0.5rem; 
+    font-size: 0.9rem; 
 }
+
 
 .btn-primary:hover {
     color: #fff; 
     background-color: #045bb8; 
     border-color: #045bb8; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-h1.text-primary {
-    color: #045bb8; 
+
+body h1.text-primary {
+    color: #045bb8 !important; 
 }
+
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
+
+:root { 
+    --primary-color: #045bb8; 
+    --secondary-color: #f8f9fa; 
+    --error-color: red; 
+    --success-color: green; 
+}
+
+
+.btn-primary {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
